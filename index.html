@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link
+        href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA/wAAAA0MDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREREREREREQAAEAABAAARAAAQAAEAABEAABAAAQAAEQAAEAABAAAREREREREREREAABAAAQAAEQAAEAIBAAARAAAQAgEAABEAABAAAQAAERERERERERERAAAQAAEAABECIBAAAQAAEQIgEAABAiARAAAQAAEAABEREREREREREAAAAAe94AAHveAAB73gAAe94AAAAAAAB73gAAe14AAHteAAB73gAAAAAAAHveAABL3gAAS9IAAHveAAAAAAAA"
+        rel="icon" type="image/x-icon" />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <button class="menu-button" id="main-home" data-link="home">Home</button>
+
+    <section class="page" id="home-page">
+        <h1 class="header">Home page</h1>
+        <div class="home-page-content">
+            <ul class="menu">
+                <li><button class="menu-button" id="show-new-game" data-link="new-game">New Game</button></li>
+                <li><button class="menu-button" id="show-statistics" data-link="statistics">Statistics</button></li>
+                <li><button class="menu-button" id="show-settings" data-link="settings">Settings</button></li>
+            </ul>
+        </div>
+    </section>
+    <section class="page" id="new-game-page">
+        <h1 class="header">Sudoku puzzle</h1>
+        <div class="wrapper">
+            <div class="field-numbers">
+                <div class="number middlify">1</div>
+                <div class="number middlify">2</div>
+                <div class="number middlify">3</div>
+                <div class="number middlify">4</div>
+                <div class="number middlify">5</div>
+                <div class="number middlify">6</div>
+                <div class="number middlify">7</div>
+                <div class="number middlify">8</div>
+                <div class="number middlify">9</div>
+            </div>
+
+            <div class="column">
+                <div class="field-letters">
+                    <div class="coordinate middlify">a</div>
+                    <div class="coordinate middlify">b</div>
+                    <div class="coordinate middlify">c</div>
+                    <div class="coordinate middlify">d</div>
+                    <div class="coordinate middlify">e</div>
+                    <div class="coordinate middlify">f</div>
+                    <div class="coordinate middlify">g</div>
+                    <div class="coordinate middlify">h</div>
+                    <div class="coordinate middlify">i</div>
+                </div>
+                <div id="game-field" class="game-field"></div>
+                <div class="pick-number-buttons">
+                    <div class="pick-number middlify">1</div>
+                    <div class="pick-number middlify">2</div>
+                    <div class="pick-number middlify">3</div>
+                    <div class="pick-number middlify">4</div>
+                    <div class="pick-number middlify">5</div>
+                    <div class="pick-number middlify">6</div>
+                    <div class="pick-number middlify">7</div>
+                    <div class="pick-number middlify">8</div>
+                    <div class="pick-number middlify">9</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page" id="statistics-page">
+        <h1 class="header">Statistics</h1>
+        <div class="statistics-wrapper">
+            <table class="statistics-table">
+                <tr>
+                    <th>Name</th>
+                    <th>Value</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td>Games total</td>
+                        <td>X</td>
+                    </tr>
+                    <tr>
+                        <td>Games won</td>
+                        <td>Y</td>
+                    </tr>
+                    <tr>
+                        <td>Win Rate</td>
+                        <td>Z %</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section class="page" id="settings-page">
+        <h1 class="header">Settings</h1>
+        <div class="settings-wrapper">
+            <div class="settings-block">
+                <span><input type="checkbox" name="night-mode" id="night-mode" class="night-mode" /><label
+                        for="night-mode">Night mode</label></span>
+                <ul class="menu">
+                    <li>Input mode:</li>
+                    <li>
+                        <input type="radio" id="input-mode-click" name="input-mode" value="click"
+                            class="input-mode-option" checked /><label for="input-mode-click">Enter by click</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="input-mode-dnd" name="input-mode" value="dnd"
+                            class="input-mode-option" /><label for="input-mode-dnd">Drag
+                            & Drop</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="input-mode-coordinates" name="input-mode" value="coordinates"
+                            class="input-mode-option" /><label for="input-mode-coordinates">Enter coordinates</label>
+                    </li>
+                </ul>
+                <ul class="menu">
+                    <li>Difficulty level:</li>
+                    <li>
+                        <input type="radio" id="difficulty-mode-easy" name="difficulty-mode" value="easy"
+                            class="difficulty-mode-option" checked /><label for="difficulty-mode-easy">Easy</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="difficulty-mode-medium" name="difficulty-mode" value="medium"
+                            class="difficulty-mode-option" /><label for="difficulty-mode-medium">medium
+                            & Drop</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="difficulty-mode-hard" name="difficulty-mode" value="hard"
+                            class="difficulty-mode-option" /><label for="difficulty-mode-hard">hard</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="difficulty-mode-very-hard" name="difficulty-mode" value="very-hard"
+                            class="difficulty-mode-option" /><label for="difficulty-mode-very-hard">very hard</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="difficulty-mode-insane" name="difficulty-mode" value="insane"
+                            class="difficulty-mode-option" /><label for="difficulty-mode-insane">insane</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="difficulty-mode-inhuman" name="difficulty-mode" value="inhuman"
+                            class="difficulty-mode-option" /><label for="difficulty-mode-inhuman">inhuman</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- <script src="./sudoku.js"></script> -->
+    <script type="module" src="./index.js"></script>
+</body>
+
+</html>

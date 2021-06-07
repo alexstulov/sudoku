@@ -1,0 +1,187 @@
+.game-field {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    /* background: red; */
+    max-width: 300px;
+}
+.field-square {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 32.5%;
+    height: 100px;
+    border: 1px solid black;
+    /* margin: 1px; */
+    /* background: green; */
+}
+.cell {
+    width: 10.35%;
+    height: 31px;
+    /* margin: 1px; */
+    border: 1px solid black;
+    /* background: yellow; */
+    cursor: default;
+}
+.cell.error {
+    border: 1px solid red;
+    color: red;
+}
+.cell.editable {
+    cursor: pointer;
+}
+.field-letters, .pick-number-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    /* background: blue; */
+    max-width: 300px;
+    min-width: 300px;
+    margin-bottom: 5px;
+}
+.pick-number-buttons {
+    margin-top: 10px;
+}
+.focused {
+    border-color: blue;
+}
+.letter-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 32.5%;
+    /* margin: 1px; */
+    border: 1px solid black;
+    /* background: green; */
+}
+.coordinate, .pick-number {
+    width: 10.4%;
+    height: 31px;
+    /* margin: 1px; */
+    border: 1px solid black;
+    /* background: yellow; */
+}
+
+.pick-number {
+    cursor: pointer;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* height: 900px; */
+}
+
+.field-numbers {
+    max-width: 33px;
+    height: 100%;
+    margin: 39px 5px 0 0;
+}
+.number-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 33px;
+    height: auto;
+    margin: 0 0 1px 0;
+    border: 1px solid black;
+    /* background: green; */
+}
+.number {
+    width: 31px;
+    height: 31px;
+    /* margin: 1px; */
+    border: 1px solid black;
+    /* background: yellow; */
+}
+.field-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.middlify {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.header {
+    margin: 20px 0 20px 30px;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.home-page-content {
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    list-style: none;
+}
+.menu-button {
+    font-weight: bold;
+    font-size: 16px;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    /* background: white; */
+    /* border: 2px solid darkblue; */
+    margin: 5px 0;
+}
+.menu-button:hover {
+    cursor: pointer;
+}
+
+.statistics-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.statistics-table, th, td {
+    text-align: left;
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+}
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.night-mode {
+    margin-left: 45px;
+}
+
+.settings-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.settings-block {
+    display: flex;
+    /* max-width: 300px; */
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hidden {
+    display: none;
+}
+
+.editable {
+    color: blue;
+    font-weight: bold;
+}
