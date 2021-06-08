@@ -1,6 +1,7 @@
 import { Sudoku } from './Sudoku.js';
 
 let currentCell = null;
+const gameField = document.querySelector('#game-field');
 
 const navButtons = document.querySelectorAll('button');
 navButtons.forEach((button) => {
@@ -30,7 +31,7 @@ newGameButton.addEventListener('click', () => {
                     currentCell = null;
                     return;
                 }
-                document.querySelector('#game-field').querySelectorAll('.cell').forEach((cell) => cell.classList.remove('focused'));
+                gameField.querySelectorAll('.cell').forEach((cell) => cell.classList.remove('focused'));
                 currentCell = newCell;
                 currentCell.classList.add('focused');
             });
@@ -52,8 +53,6 @@ newGameButton.addEventListener('click', () => {
             }
         });
     });
-
-    const gameField = document.querySelector('#game-field');
     gameField.innerHTML = '';
     gameField.append(...cells);
 });
